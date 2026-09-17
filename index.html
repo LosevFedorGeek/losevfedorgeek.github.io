@@ -1,0 +1,1308 @@
+<!doctype html>
+<html lang="ru" class="scroll-smooth" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b0c0e'/%3E%3Cpath d='M7 10l6 6-6 6' stroke='%2334c759' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3Cline x1='16' y1='22' x2='25' y2='22' stroke='%23939b76' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E"
+    />
+    <title>THEODORE.LOSEV | Full-stack Developer &amp; UI/UX Architect</title>
+    <meta
+      name="description"
+      content="Портфолио Федора Лосева: Full-stack разработка, архитектура баз данных C# и SQL, современный фронтенд и премиальный UI/UX дизайн в Figma."
+    />
+    <meta
+      name="keywords"
+      content="веб-разработчик, full-stack, frontend, C#, .NET, SQL, Figma, Tilda, интерфейсы"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://losevfedorgeek.github.io/" />
+    <meta property="og:site_name" content="THEODORE.LOSEV Portfolio" />
+    <meta
+      property="og:title"
+      content="THEODORE.LOSEV | Full-stack Developer &amp; UI/UX Architect"
+    />
+    <meta
+      property="og:description"
+      content="Разработка надежного ПО, высоконагруженных баз данных на C# и SQL, а также современных интерфейсов в Figma."
+    />
+    <meta
+      property="og:image"
+      content="https://losevfedorgeek.github.io/og-cover.jpg"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://losevfedorgeek.github.io/og-cover.jpg"
+    />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="THEODORE.LOSEV Full-stack Developer &amp; UI/UX Architect"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="THEODORE.LOSEV | Full-stack Developer &amp; UI/UX Architect"
+    />
+    <meta
+      name="twitter:description"
+      content="Разработка надежного ПО, баз данных C# и SQL, премиальный UI/UX дизайн."
+    />
+    <meta
+      name="twitter:image"
+      content="https://losevfedorgeek.github.io/og-cover.jpg"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=1.0.3" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Фёдор Лосев",
+        "alternateName": "Theodore Losev",
+        "jobTitle": "Full-stack Developer & UI/UX Designer",
+        "image": "https://losevfedorgeek.github.io/og-cover.jpg",
+        "email": "mailto:losevfedor287@gmail.com",
+        "telephone": "+79114419877",
+        "sameAs": [
+          "https://t.me/lonelyauthor",
+          "https://github.com/LosevFedorGeek"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <canvas
+      id="ambient-canvas"
+      class="ambient-canvas"
+      aria-hidden="true"
+    ></canvas>
+    <div class="scroll-progress-bar" id="progressBar" aria-hidden="true"></div>
+
+    <header class="header-wrapper" id="header">
+      <div class="container header">
+        <a href="#" class="brand-text" aria-label="Home">
+          <span class="prompt-sym">&gt;_</span> THEODORE.LOSEV
+        </a>
+
+        <nav class="nav" id="navMenu">
+          <a href="#about" class="nav-link"
+            ><span class="nav-num">01.</span>
+            <span data-i18n="nav_about">Обо мне</span></a
+          >
+          <a href="#skills" class="nav-link"
+            ><span class="nav-num">02.</span>
+            <span data-i18n="nav_skills">Стек</span></a
+          >
+          <a href="#experience" class="nav-link"
+            ><span class="nav-num">03.</span>
+            <span data-i18n="nav_experience">Опыт</span></a
+          >
+          <a href="#projects" class="nav-link"
+            ><span class="nav-num">04.</span>
+            <span data-i18n="nav_projects">Кейсы</span></a
+          >
+          <a href="#calculator" class="nav-link"
+            ><span class="nav-num">05.</span>
+            <span data-i18n="nav_calc">Калькулятор</span></a
+          >
+          <a href="#faq" class="nav-link"
+            ><span class="nav-num">06.</span>
+            <span data-i18n="nav_faq">FAQ</span></a
+          >
+        </nav>
+
+        <div class="header-actions">
+          <div
+            class="lang-switcher desktop-controls"
+            role="group"
+            aria-label="Language"
+          >
+            <button type="button" class="lang-btn active" data-lang="ru">
+              RU
+            </button>
+            <button type="button" class="lang-btn" data-lang="en">EN</button>
+            <button type="button" class="lang-btn" data-lang="de">DE</button>
+          </div>
+
+          <button
+            type="button"
+            class="theme-toggle-btn desktop-controls"
+            id="themeToggle"
+            aria-label="Переключить тему"
+          >
+            <svg
+              class="theme-icon sun-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg
+              class="theme-icon moon-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+
+          <a href="#contact" class="btn-primary desktop-only">
+            <span class="btn-inner"
+              ><span data-i18n="btn_contact">Связаться</span>
+              <span class="arrow">→</span></span
+            >
+          </a>
+
+          <button
+            class="burger-btn"
+            id="burgerBtn"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+          >
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-inner">
+        <nav class="mobile-nav">
+          <a href="#about" class="mobile-link"
+            ><span>// 01</span> <span data-i18n="nav_about">Обо мне</span></a
+          >
+          <a href="#skills" class="mobile-link"
+            ><span>// 02</span> <span data-i18n="nav_skills">Стек</span></a
+          >
+          <a href="#experience" class="mobile-link"
+            ><span>// 03</span> <span data-i18n="nav_experience">Опыт</span></a
+          >
+          <a href="#projects" class="mobile-link"
+            ><span>// 04</span> <span data-i18n="nav_projects">Кейсы</span></a
+          >
+          <a href="#calculator" class="mobile-link"
+            ><span>// 05</span> <span data-i18n="nav_calc">Калькулятор</span></a
+          >
+          <a href="#faq" class="mobile-link"
+            ><span>// 06</span> <span data-i18n="nav_faq">FAQ</span></a
+          >
+          <a href="#contact" class="mobile-link highlight"
+            ><span>// 07</span>
+            <span data-i18n="btn_contact">Связаться</span></a
+          >
+        </nav>
+
+        <div class="mobile-actions-bar">
+          <div class="lang-switcher" role="group" aria-label="Language Mobile">
+            <button type="button" class="lang-btn active" data-lang="ru">
+              RU
+            </button>
+            <button type="button" class="lang-btn" data-lang="en">EN</button>
+            <button type="button" class="lang-btn" data-lang="de">DE</button>
+          </div>
+
+          <button
+            type="button"
+            class="theme-toggle-btn"
+            id="themeToggleMobile"
+            aria-label="Переключить тему"
+          >
+            <svg
+              class="theme-icon sun-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg
+              class="theme-icon moon-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+        </div>
+
+        <div class="mobile-contacts">
+          <a href="mailto:losevfedor287@gmail.com">losevfedor287@gmail.com</a>
+          <a href="tel:+79114419877">+7 911 441-98-77</a>
+        </div>
+      </div>
+    </div>
+
+    <main class="container main-content">
+      <section class="hero" id="hero">
+        <div class="hero-content">
+          <div class="badge fade-up">
+            <span class="dot"></span>
+            <span class="badge-text" data-i18n="hero_badge"
+              >Статус: открыт к проектам</span
+            >
+          </div>
+
+          <h1 class="hero-title fade-up" data-delay="100">
+            <span data-i18n="hero_title_1">FULL-STACK</span><br />
+            <span class="gradient-text" data-i18n="hero_title_2"
+              >РАЗРАБОТЧИК.</span
+            >
+          </h1>
+
+          <div class="typewriter-container fade-up" data-delay="150">
+            <span class="console-prefix">$ focus:</span>
+            <span class="typewriter-text" id="typewriter"></span>
+            <span class="cursor">|</span>
+          </div>
+
+          <p
+            class="hero-subtitle fade-up"
+            data-delay="200"
+            data-i18n="hero_subtitle"
+          >
+            Разрабатываю надежные веб-сервисы, архитектуру баз данных на&nbsp;C#
+            и&nbsp;SQL, а&nbsp;также современные интерфейсы в&nbsp;Figma.
+            От&nbsp;идеи и&nbsp;прототипа до&nbsp;продакшена.
+          </p>
+
+          <div class="hero-cta-group fade-up" data-delay="250">
+            <a href="#projects" class="btn-primary">
+              <span class="btn-inner" data-i18n="btn_projects"
+                >Смотреть кейсы ↗</span
+              >
+            </a>
+            <a
+              href="CVLosev.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-secondary"
+            >
+              <span class="btn-icon">↓</span>
+              <span data-i18n="btn_resume">Резюме (PDF)</span>
+            </a>
+          </div>
+
+          <div class="hero-terminal-pill fade-up" data-delay="300">
+            <span class="pill-code"
+              >git commit -m "build scalable digital products"</span
+            >
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper fade-up" data-delay="200">
+          <div class="photo-card" id="profileCard">
+            <div class="corner-accent top-left"></div>
+            <div class="corner-accent top-right"></div>
+            <div class="corner-accent bottom-left"></div>
+            <div class="corner-accent bottom-right"></div>
+            <img src="IMG_3778.JPG" alt="Фёдор Лосев" class="profile-photo" />
+            <div class="photo-overlay-tag">
+              <span class="tag-sym">&gt;</span> FEDOR_LOSEV.exe
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-bar fade-up">
+        <div class="metric-item">
+          <div class="metric-num">5.0</div>
+          <div class="metric-label" data-i18n="trust_diploma">
+            Красный диплом (ВоГУ)
+          </div>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+          <div class="metric-num" data-i18n="trust_grant_val">694K</div>
+          <div class="metric-label" data-i18n="trust_grant">
+            Победитель федерального гранта
+          </div>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+          <div class="metric-num">4+</div>
+          <div class="metric-label" data-i18n="trust_exp">
+            Года коммерческой разработки
+          </div>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+          <div class="metric-num">100%</div>
+          <div class="metric-label" data-i18n="trust_deadline">
+            Соблюдение сроков и дедлайнов
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section about">
+        <div class="section-tag fade-up">&gt;_ SYSTEM_PROFILE</div>
+        <h2 class="section-title fade-up">
+          ... /<span data-i18n="about_title">Обо мне</span>
+        </h2>
+
+        <div class="about-grid">
+          <div class="about-text-col fade-up">
+            <p class="lead-text" data-i18n="about_lead">
+              Инженер с&nbsp;практическим опытом разработки ПО, оптимизации баз
+              данных на&nbsp;производстве и&nbsp;проектирования масштабируемых
+              веб-сервисов.
+            </p>
+            <p class="secondary-text" data-i18n="about_sub">
+              Мой подход строится на&nbsp;стыке инженерной точности
+              и&nbsp;продуктовой ценности: интерфейс обязан работать плавно
+              и&nbsp;понятно, а&nbsp;серверная архитектура гарантировать
+              сохранность и&nbsp;скорость данных при любых нагрузках.
+            </p>
+
+            <div class="work-principles">
+              <div class="principle-pill">
+                <span class="principle-icon">⚡</span>
+                <div>
+                  <strong data-i18n="principle_1_title"
+                    >Clean Code &amp; SOLID</strong
+                  >
+                  <span data-i18n="principle_1_desc"
+                    >Архитектура, которую легко поддерживать
+                    и&nbsp;масштабировать без технического долга.</span
+                  >
+                </div>
+              </div>
+              <div class="principle-pill">
+                <span class="principle-icon">🎯</span>
+                <div>
+                  <strong data-i18n="principle_2_title">Product-Mindset</strong>
+                  <span data-i18n="principle_2_desc"
+                    >Фокус на&nbsp;окупаемости разработки, бизнес-метриках
+                    и&nbsp;удобстве конечных клиентов.</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-code-col fade-up" data-delay="150">
+            <div class="terminal-mockup">
+              <div class="terminal-top">
+                <span class="term-btn term-red"></span>
+                <span class="term-btn term-yellow"></span>
+                <span class="term-btn term-green"></span>
+                <span class="term-title">losev_profile.json</span>
+              </div>
+              <pre class="terminal-body"><code>{
+  <span class="json-key">"developer"</span>: <span class="json-val">"Fedor Losev"</span>,
+  <span class="json-key">"roles"</span>: [
+    <span class="json-val">"Full-stack Engineer"</span>,
+    <span class="json-val">"Database Architect"</span>,
+    <span class="json-val">"UI/UX Designer"</span>
+  ],
+  <span class="json-key">"core_stack"</span>: [
+    <span class="json-val">"C#"</span>, <span class="json-val">".NET"</span>, <span class="json-val">"SQL"</span>,
+    <span class="json-val">"WPF"</span>, <span class="json-val">"JS"</span>, <span class="json-val">"Figma"</span>
+  ],
+  <span class="json-key">"ready_for_hire"</span>: <span class="json-bool">true</span>
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section skills">
+        <div class="section-tag fade-up">&gt;_ TECH_STACK_MATRIX</div>
+        <h2 class="section-title fade-up">
+          ... /<span data-i18n="skills_title">Стек</span>
+        </h2>
+
+        <div class="skills-grid">
+          <div class="skill-card tilt-card fade-up" data-delay="50">
+            <div class="card-header">
+              <div>
+                <span class="card-category">SERVER &amp; DESKTOP</span>
+                <h3 data-i18n="skill_card_1_title">Backend &amp; Systems</h3>
+              </div>
+              <span class="card-number num-khaki">[01]</span>
+            </div>
+            <p class="card-desc" data-i18n="skill_card_1_desc">
+              Проектирование надежного серверного кода, реляционных баз данных
+              и&nbsp;системных настольных приложений.
+            </p>
+            <div class="tags">
+              <span>C#</span>
+              <span>.NET 8</span>
+              <span>WPF</span>
+              <span>MS SQL Server</span>
+              <span>SSMS</span>
+              <span>PostgreSQL</span>
+              <span>REST API</span>
+              <span>PHP 8</span>
+            </div>
+          </div>
+
+          <div class="skill-card tilt-card fade-up" data-delay="100">
+            <div class="card-header">
+              <div>
+                <span class="card-category">CLIENT INTERFACES</span>
+                <h3 data-i18n="skill_card_2_title">Frontend Engine</h3>
+              </div>
+              <span class="card-number num-wine">[02]</span>
+            </div>
+            <p class="card-desc" data-i18n="skill_card_2_desc">
+              Адаптивная кроссбраузерная верстка, высокая скорость загрузки
+              и&nbsp;микроинтеракции без раздутых библиотек.
+            </p>
+            <div class="tags">
+              <span>HTML5 Semantic</span>
+              <span>Modern CSS3</span>
+              <span>Vanilla ES6+</span>
+              <span>Canvas 2D</span>
+              <span>BEM Method</span>
+              <span>Responsive Grid</span>
+            </div>
+          </div>
+
+          <div class="skill-card tilt-card fade-up" data-delay="150">
+            <div class="card-header">
+              <div>
+                <span class="card-category">VISUAL ARCHITECTURE</span>
+                <h3 data-i18n="skill_card_3_title">UI/UX &amp; Media Tools</h3>
+              </div>
+              <span class="card-number num-khaki">[03]</span>
+            </div>
+            <p class="card-desc" data-i18n="skill_card_3_desc">
+              Дизайн-системы в&nbsp;Figma с&nbsp;Auto-Layout, графика
+              в&nbsp;Photoshop и&nbsp;Illustrator, 3D в&nbsp;Vectary
+              и&nbsp;запуск под ключ на&nbsp;Tilda.
+            </p>
+            <div class="tags">
+              <span>Figma</span>
+              <span>Photoshop</span>
+              <span>Illustrator</span>
+              <span>Vectary 3D</span>
+              <span>Tilda Zero Block</span>
+              <span>Git / GitHub</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section experience">
+        <div class="section-tag fade-up">&gt;_ CAREER_TIMELINE</div>
+        <h2 class="section-title fade-up">
+          ... /<span data-i18n="exp_title">Опыт</span>
+        </h2>
+
+        <div class="exp-list">
+          <div class="exp-item fade-up">
+            <div class="exp-date" data-i18n="exp_1_date">
+              Дек 2025 - Май 2026
+            </div>
+            <div class="exp-main">
+              <div class="exp-role" data-i18n="exp_1_role">
+                Специалист по информационным системам
+              </div>
+              <div class="exp-desc" data-i18n="exp_1_desc">
+                Декомпозиция требований и&nbsp;модульная разработка. Написание
+                SQL-скриптов с&nbsp;повышением производительности запросов
+                к&nbsp;БД на&nbsp;20%. Бесшовная синхронизация компонентов
+                с&nbsp;бэкенд-командой.
+              </div>
+            </div>
+            <div class="exp-company">ООО «Акатан»</div>
+          </div>
+
+          <div class="exp-item fade-up">
+            <div class="exp-date" data-i18n="exp_2_date">
+              Июнь 2025 - Сент 2025
+            </div>
+            <div class="exp-main">
+              <div class="exp-role" data-i18n="exp_2_role">
+                Техник по базам данных
+              </div>
+              <div class="exp-desc" data-i18n="exp_2_desc">
+                Проектирование логических схем промышленных баз данных, снижение
+                избыточности на&nbsp;10% за&nbsp;счет нормализации. Оптимизация
+                SQL-запросов в&nbsp;среде SSMS с&nbsp;ускорением обработки
+                данных на&nbsp;25%.
+              </div>
+            </div>
+            <div class="exp-company">ООО «ВПЗ»</div>
+          </div>
+
+          <div class="exp-item fade-up">
+            <div class="exp-date" data-i18n="exp_3_date">
+              Май 2024 - Июнь 2025
+            </div>
+            <div class="exp-main">
+              <div class="exp-role" data-i18n="exp_3_role">
+                Веб-разработчик (Full-cycle)
+              </div>
+              <div class="exp-desc" data-i18n="exp_3_desc">
+                Проектирование UI/UX в&nbsp;Figma (ускорение согласования
+                с&nbsp;заказчиками на&nbsp;25%). Адаптивная
+                и&nbsp;кроссбраузерная верстка, интеграция контента, рост
+                вовлеченности аудитории на&nbsp;15%.
+              </div>
+            </div>
+            <div class="exp-company">ООО «Плейс-Старт»</div>
+          </div>
+
+          <div class="exp-item fade-up">
+            <div class="exp-date" data-i18n="exp_4_date">2023 - 2024</div>
+            <div class="exp-main">
+              <div class="exp-role" data-i18n="exp_4_role">
+                Руководитель проекта (Грант 694 000 ₽)
+              </div>
+              <div class="exp-desc" data-i18n="exp_4_desc">
+                Победитель федерального конкурса инновационных грантов.
+                Руководство полным циклом разработки прикладного программного
+                обеспечения на&nbsp;платформе .NET.
+              </div>
+            </div>
+            <div class="exp-company">Фонд содействия инновациям</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section projects">
+        <div class="section-header-wrap fade-up">
+          <div>
+            <div class="section-tag">&gt;_ PRODUCTION_PORTFOLIO</div>
+            <h2 class="section-title">
+              ... /<span data-i18n="projects_title">Кейсы</span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="projects-grid">
+          <article
+            class="project-card tilt-card fade-up"
+            data-project-url="https://nataliakochulanova.ru"
+          >
+            <div class="project-image-wrapper">
+              <img
+                src="nataliakochulanova.jpg"
+                alt="Портфолио Натальи Кочулановой"
+                loading="lazy"
+              />
+              <div class="project-hover-overlay">
+                <span class="open-link-badge" data-i18n="badge_open_site"
+                  >Открыть сайт ↗</span
+                >
+              </div>
+              <div class="project-num-tag">01 / BRAND</div>
+            </div>
+            <div class="project-info">
+              <div class="project-top">
+                <h3 class="project-name" data-i18n="proj_1_name">
+                  Наталья Кочуланова
+                </h3>
+                <span class="live-dot" title="Online"></span>
+              </div>
+              <p class="project-summary" data-i18n="proj_1_desc">
+                Премиальное портфолио для графического и&nbsp;UI/UX дизайнера
+                с&nbsp;20-летним опытом. Архитектурная швейцарская типографика,
+                презентация кейсов и&nbsp;высокая скорость загрузки.
+              </p>
+              <div class="tags">
+                <span>UI/UX Design</span>
+                <span>Identity</span>
+                <span>Web Performance</span>
+                <span>Adaptive Grid</span>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="project-card tilt-card fade-up"
+            data-project-url="https://vika-art.vercel.app"
+          >
+            <div class="project-image-wrapper">
+              <img
+                src="vika-art.jpg"
+                alt="Сайт VIKA.ART Креативный 3D маникюр"
+                loading="lazy"
+              />
+              <div class="project-hover-overlay">
+                <span class="open-link-badge" data-i18n="badge_open_site"
+                  >Открыть сайт ↗</span
+                >
+              </div>
+              <div class="project-num-tag">02 / CYBER</div>
+            </div>
+            <div class="project-info">
+              <div class="project-top">
+                <h3 class="project-name" data-i18n="proj_2_name">
+                  VIKA.ART : Креативный 3D Арт
+                </h3>
+                <span class="live-dot" title="Online"></span>
+              </div>
+              <p class="project-summary" data-i18n="proj_2_desc">
+                Промо-лендинг для студии эксклюзивного маникюра. Сложные
+                3D-формы, стилистика жидкого металла, неоновые акценты
+                и&nbsp;конверсионный прайс-лист.
+              </p>
+              <div class="tags">
+                <span>Creative UI</span>
+                <span>3D Showcase</span>
+                <span>Vercel Deploy</span>
+                <span>Mobile-First</span>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="project-card tilt-card fade-up"
+            data-project-url="https://buildalliance.tilda.ws"
+          >
+            <div class="project-image-wrapper">
+              <img
+                src="buildalliance.jpg"
+                alt="Премиальное строительство Строй-Альянс"
+                loading="lazy"
+              />
+              <div class="project-hover-overlay">
+                <span class="open-link-badge" data-i18n="badge_open_site"
+                  >Открыть сайт ↗</span
+                >
+              </div>
+              <div class="project-num-tag">03 / REALTY</div>
+            </div>
+            <div class="project-info">
+              <div class="project-top">
+                <h3 class="project-name" data-i18n="proj_3_name">
+                  Строй-Альянс
+                </h3>
+                <span class="live-dot" title="Online"></span>
+              </div>
+              <p class="project-summary" data-i18n="proj_3_desc">
+                Корпоративный портал для девелоперской компании
+                премиум-сегмента. Строгий дизайн в&nbsp;глубоких темных тонах,
+                блочная верстка Zero Block и&nbsp;адаптив.
+              </p>
+              <div class="tags">
+                <span>Tilda Zero Block</span>
+                <span>Corporate UI</span>
+                <span>Architecture</span>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="project-card tilt-card fade-up"
+            data-project-url="https://github.com/LosevFedorGeek/Monte-Cristo-fix"
+          >
+            <div class="project-image-wrapper">
+              <img
+                src="Screenshot_3.jpg"
+                alt="Monte-Cristo 2D RPG"
+                loading="lazy"
+              />
+              <div class="project-hover-overlay">
+                <span class="open-link-badge" data-i18n="badge_open_repo"
+                  >Открыть репозиторий ↗</span
+                >
+              </div>
+              <div class="project-num-tag">04 / GAMEDEV</div>
+            </div>
+            <div class="project-info">
+              <div class="project-top">
+                <h3 class="project-name" data-i18n="proj_4_name">
+                  Monte-Cristo RPG
+                </h3>
+                <span class="live-dot" title="Open Source"></span>
+              </div>
+              <p class="project-summary" data-i18n="proj_4_desc">
+                Дипломный проект. Полноценная 2D top-down 16-bit RPG
+                на&nbsp;Unity 6. Архитектура игровых циклов на&nbsp;C#,
+                инвентарь, искусственный интеллект NPC и&nbsp;анимации.
+              </p>
+              <div class="tags">
+                <span>Unity 6</span>
+                <span>C# Core</span>
+                <span>Algorithms &amp; AI</span>
+                <span>2D Top-Down</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="calculator" class="section calculator-section">
+        <div class="section-tag fade-up">&gt;_ ESTIMATE_CONFIGURATOR</div>
+        <h2 class="section-title fade-up">
+          ... /<span data-i18n="calc_title">Калькулятор</span>
+        </h2>
+
+        <div class="calculator-box fade-up">
+          <div class="calc-grid">
+            <div class="calc-col">
+              <label class="calc-label" data-i18n="calc_label_1"
+                >1. Тип цифрового продукта:</label
+              >
+              <div class="calc-options" id="calcType">
+                <button
+                  type="button"
+                  class="calc-chip active"
+                  data-type="landing"
+                  data-cost="40000"
+                  data-days="6"
+                >
+                  <span data-i18n="type_landing">Лендинг под ключ</span>
+                </button>
+                <button
+                  type="button"
+                  class="calc-chip"
+                  data-type="corporate"
+                  data-cost="75000"
+                  data-days="14"
+                >
+                  <span data-i18n="type_corp">Корпоративный сайт</span>
+                </button>
+                <button
+                  type="button"
+                  class="calc-chip"
+                  data-type="service"
+                  data-cost="135000"
+                  data-days="24"
+                >
+                  <span data-i18n="type_service">Веб-сервис / Бэкенд</span>
+                </button>
+                <button
+                  type="button"
+                  class="calc-chip"
+                  data-type="figma"
+                  data-cost="35000"
+                  data-days="5"
+                >
+                  <span data-i18n="type_figma">UI/UX дизайн в Figma</span>
+                </button>
+              </div>
+
+              <label
+                class="calc-label calc-label-margin"
+                data-i18n="calc_label_2"
+                >2. Дополнительные опции:</label
+              >
+              <div class="calc-options-checkbox">
+                <label class="checkbox-container">
+                  <input
+                    type="checkbox"
+                    id="optAnimations"
+                    data-cost="12000"
+                    data-days="2"
+                    checked
+                  />
+                  <span class="checkmark">
+                    <svg
+                      class="checkmark-icon"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="2.5 6 5 8.5 9.5 3.5"></polyline>
+                    </svg>
+                  </span>
+                  <span class="checkbox-text" data-i18n="opt_anim"
+                    >Сложные микроанимации и&nbsp;Canvas-интерактив</span
+                  >
+                </label>
+                <label class="checkbox-container">
+                  <input
+                    type="checkbox"
+                    id="optBackend"
+                    data-cost="20000"
+                    data-days="4"
+                    checked
+                  />
+                  <span class="checkmark">
+                    <svg
+                      class="checkmark-icon"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="2.5 6 5 8.5 9.5 3.5"></polyline>
+                    </svg>
+                  </span>
+                  <span class="checkbox-text" data-i18n="opt_back"
+                    >Серверная обработка, БД и&nbsp;почтовые уведомления</span
+                  >
+                </label>
+                <label class="checkbox-container">
+                  <input
+                    type="checkbox"
+                    id="optSpeed"
+                    data-cost="18000"
+                    data-days="-3"
+                  />
+                  <span class="checkmark">
+                    <svg
+                      class="checkmark-icon"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="2.5 6 5 8.5 9.5 3.5"></polyline>
+                    </svg>
+                  </span>
+                  <span class="checkbox-text" data-i18n="opt_speed"
+                    >Срочный запуск проекта (Turbo-спринт)</span
+                  >
+                </label>
+              </div>
+            </div>
+
+            <div class="calc-summary-col">
+              <div class="summary-card">
+                <div>
+                  <div class="summary-badge">&gt;_ ESTIMATE_RESULT</div>
+                  <div
+                    class="summary-price-label"
+                    data-i18n="calc_budget_label"
+                  >
+                    Ориентировочный бюджет:
+                  </div>
+                  <div class="summary-price" id="calcPriceDisplay">
+                    72 000 ₽
+                  </div>
+                  <div class="summary-time">
+                    <span data-i18n="calc_time_label">Срок реализации:</span>
+                    <strong id="calcDaysDisplay">~12 рабочих дней</strong>
+                  </div>
+                  <ul class="summary-checklist" id="calcChecklist"></ul>
+                </div>
+                <button
+                  type="button"
+                  class="btn-primary btn-block"
+                  id="calcApplyBtn"
+                >
+                  <span class="btn-inner"
+                    ><span data-i18n="calc_apply_btn"
+                      >Зафиксировать условия в заявке</span
+                    >
+                    →</span
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="section faq">
+        <div class="section-tag fade-up">&gt;_ PROTOCOL_FAQ</div>
+        <h2 class="section-title fade-up">
+          ... /<span data-i18n="faq_title">FAQ</span>
+        </h2>
+
+        <div class="faq-accordion fade-up">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq_q1"
+                >Как строится процесс взаимодействия над проектом?</span
+              >
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner" data-i18n="faq_a1">
+                <div class="faq-step-item">
+                  <span class="faq-step-num">01</span>
+                  <div>
+                    <strong>Бриф и исследование:</strong> анализ задач бизнеса,
+                    структуры и технического задания.
+                  </div>
+                </div>
+                <div class="faq-step-item">
+                  <span class="faq-step-num">02</span>
+                  <div>
+                    <strong>Прототипирование в Figma:</strong> согласование
+                    сценариев использования и дизайн-системы.
+                  </div>
+                </div>
+                <div class="faq-step-item">
+                  <span class="faq-step-num">03</span>
+                  <div>
+                    <strong>Программирование:</strong> чистая верстка и
+                    отказоустойчивая серверная логика.
+                  </div>
+                </div>
+                <div class="faq-step-item">
+                  <span class="faq-step-num">04</span>
+                  <div>
+                    <strong>Тестирование и релиз:</strong> аудит скорости
+                    (Google PageSpeed 90+) и деплой на сервер.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq_q2"
+                >С каким стеком вы работаете в коммерческих задачах?</span
+              >
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner" data-i18n="faq_a2">
+                <div class="faq-step-item">
+                  <span class="faq-step-num">Backend</span>
+                  <div>
+                    C# / .NET 8, SQL Server (SSMS), PostgreSQL и PHP 8+ для
+                    серверных обработчиков.
+                  </div>
+                </div>
+                <div class="faq-step-item">
+                  <span class="faq-step-num">Frontend</span>
+                  <div>
+                    Нативный JavaScript (ES6+), семантический HTML5 и
+                    современный CSS без тяжелых библиотек.
+                  </div>
+                </div>
+                <div class="faq-step-item">
+                  <span class="faq-step-num">Design</span>
+                  <div>
+                    Figma с Auto-Layout, Photoshop, Illustrator, Vectary 3D и
+                    Tilda Zero Block.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq_q3"
+                >Передаются ли исходники и права заказчику?</span
+              >
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner" data-i18n="faq_a3">
+                Да, абсолютно все права, макеты Figma, исходный чистый код
+                в&nbsp;Git-репозитории и&nbsp;инструкции по&nbsp;развертыванию
+                передаются вам в&nbsp;полном объеме после сдачи проекта.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq_q4">Возможна ли работа по договору?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner" data-i18n="faq_a4">
+                Да, официальное оформление через самозанятость
+                с&nbsp;формированием фискальных чеков либо договор подряда
+                с&nbsp;актами приема-передачи работ.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="contact" class="footer">
+        <div class="footer-card fade-up">
+          <div class="footer-header">
+            <div class="footer-badge">
+              &gt;_ INITIATE_CONTACT // READY_TO_COLLABORATE
+            </div>
+            <h2 class="footer-title" data-i18n="contact_title">
+              Готовы запустить проект? Давайте обсудим задачу.
+            </h2>
+            <p class="footer-lead" data-i18n="contact_lead">
+              Оставьте заявку через форму или напишите напрямую на&nbsp;почту
+              и&nbsp;в&nbsp;Telegram. Быстрый ответ с&nbsp;оценкой сроков
+              и&nbsp;архитектуры.
+            </p>
+          </div>
+
+          <div class="footer-body">
+            <div class="footer-form-col">
+              <form
+                class="contact-form"
+                id="leadForm"
+                action="send.php"
+                method="POST"
+                novalidate
+              >
+                <input
+                  type="text"
+                  name="website_hp"
+                  class="hp-field"
+                  tabindex="-1"
+                  autocomplete="off"
+                  aria-hidden="true"
+                />
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="userName" data-i18n="form_name_label"
+                      >Ваше имя / Компания *</label
+                    >
+                    <input
+                      type="text"
+                      id="userName"
+                      name="name"
+                      class="form-input"
+                      placeholder="Александр"
+                      required
+                    />
+                    <span class="field-error" id="nameError"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="userContact" data-i18n="form_contact_label"
+                      >Телефон или Email *</label
+                    >
+                    <input
+                      type="text"
+                      id="userContact"
+                      name="contact"
+                      class="form-input"
+                      placeholder="+7 (999) 000-00-00 или mail@domain.com"
+                      required
+                    />
+                    <span class="field-error" id="contactError"></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="userMessage" data-i18n="form_msg_label"
+                    >Детали задачи / Результаты калькулятора</label
+                  >
+                  <textarea
+                    id="userMessage"
+                    name="message"
+                    class="form-textarea"
+                    rows="4"
+                    placeholder="Опишите проект, дедлайны и пожелания по функционалу..."
+                  ></textarea>
+                </div>
+
+                <div class="form-footer">
+                  <button
+                    type="submit"
+                    class="btn-primary btn-submit"
+                    id="submitBtn"
+                  >
+                    <span class="btn-inner">
+                      <span class="btn-text" data-i18n="form_submit_btn"
+                        >Отправить заявку ↗</span
+                      >
+                      <span class="btn-loader" aria-hidden="true"></span>
+                    </span>
+                  </button>
+                  <span class="privacy-note" data-i18n="form_privacy"
+                    >Конфиденциальность гарантируется. Данные используются
+                    исключительно для обратной связи.</span
+                  >
+                </div>
+
+                <div
+                  class="form-status-msg"
+                  id="formStatus"
+                  aria-live="polite"
+                ></div>
+              </form>
+            </div>
+
+            <div class="footer-contacts-col">
+              <div class="direct-contacts-box">
+                <div class="contacts-title" data-i18n="direct_contacts_title">
+                  Прямые каналы связи
+                </div>
+
+                <div class="contact-cards-grid">
+                  <a
+                    href="mailto:losevfedor287@gmail.com"
+                    class="contact-pill-card"
+                  >
+                    <div class="pill-icon">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                        <path
+                          d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="pill-info">
+                      <span class="pill-type">EMAIL</span>
+                      <strong class="pill-value"
+                        >losevfedor287@gmail.com</strong
+                      >
+                    </div>
+                  </a>
+
+                  <a href="tel:+79114419877" class="contact-pill-card">
+                    <div class="pill-icon">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="pill-info">
+                      <span class="pill-type" data-i18n="contact_phone_label"
+                        >PHONE</span
+                      >
+                      <strong class="pill-value">+7 911 441-98-77</strong>
+                    </div>
+                  </a>
+
+                  <a
+                    href="https://t.me/lonelyauthor"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-pill-card"
+                  >
+                    <div class="pill-icon">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                      </svg>
+                    </div>
+                    <div class="pill-info">
+                      <span class="pill-type">TELEGRAM</span>
+                      <strong class="pill-value">@lonelyauthor</strong>
+                    </div>
+                  </a>
+
+                  <a
+                    href="https://github.com/LosevFedorGeek"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-pill-card"
+                  >
+                    <div class="pill-icon">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="pill-info">
+                      <span class="pill-type">GITHUB</span>
+                      <strong class="pill-value">LosevFedorGeek</strong>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-watermark-container" aria-hidden="true">
+          <svg viewBox="0 0 1180 100" class="footer-svg-text">
+            <text x="50%" y="78%" text-anchor="middle" class="svg-giant-text">
+              THEODORE.LOSEV
+            </text>
+          </svg>
+        </div>
+
+        <div class="footer-bottom-bar">
+          <span>© 2026 Theodore Losev. All rights reserved.</span>
+          <span>ENGINEERED WITH CLEAN CODE &amp; PASSION</span>
+        </div>
+      </footer>
+    </main>
+
+    <button class="back-to-top" id="backToTop" aria-label="Наверх">
+      <svg
+        viewBox="0 0 24 24"
+        width="20"
+        height="20"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+
+    <script src="main.js?v=1.0.3"></script>
+  </body>
+</html>
