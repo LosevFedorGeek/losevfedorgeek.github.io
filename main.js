@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileMenu();
   initTypewriter();
   initScrollAnimations();
+  initMetricCounters();
   init3DTilt();
   initProjectCardLinks();
   initCostCalculator();
@@ -37,15 +38,18 @@ const translations = {
     trust_deadline: "Соблюдение сроков и дедлайнов",
     about_title: "Обо мне",
     about_lead:
-      "Инженер с практическим опытом разработки ПО, оптимизации баз данных на производстве и проектирования высоконагруженных веб-сервисов.",
+      "Инженер-разработчик с красным дипломом ВоГУ, победой в инновационном гранте на 694 000 ₽ и опытом оптимизации промышленных баз данных.",
     about_sub:
-      "Мой подход строится на стыке инженерной точности и продуктовой конверсии: интерфейс обязан работать плавно и понятно, а серверная архитектура гарантировать сохранность и скорость данных при высоких нагрузках.",
-    principle_1_title: "Clean Code & SOLID",
-    principle_1_desc:
-      "Архитектура, которую легко поддерживать и масштабировать без технического долга.",
-    principle_2_title: "Product-Mindset",
-    principle_2_desc:
-      "Фокус на окупаемости разработки, бизнес-метриках и удобстве конечных клиентов.",
+      "Объединяю надежность enterprise-технологий C# / .NET с конверсионным UI/UX дизайном в Figma. Реализую проекты под ключ без лишних звеньев и технического долга.",
+    auth_card_1_title: "Enterprise & Промышленные БД",
+    auth_card_1_desc:
+      "Опыт в SSMS и PostgreSQL на производстве (ВПЗ, Акатан), ускорение сложных запросов к БД до 25%.",
+    auth_card_2_title: "Full-Cycle в одних руках",
+    auth_card_2_desc:
+      "От интерактивного прототипа в Figma до серверной логики .NET и быстрого фронтенда без переплат агентствам.",
+    auth_card_3_title: "Договор, Git и гарантия 30 дней",
+    auth_card_3_desc:
+      "Официальный договор, чеки, ежедневный контроль в Git и бесплатная техническая поддержка после сдачи.",
     skills_title: "Стек",
     skill_card_1_title: "Backend & Systems",
     skill_card_1_desc:
@@ -146,15 +150,18 @@ const translations = {
     trust_deadline: "On-Time Delivery Guarantee",
     about_title: "About Me",
     about_lead:
-      "Software engineer with hands-on expertise in industrial database optimization, server architecture, and high-performance web products.",
+      "Software engineer with a VoGU Honours Degree, 694,000 RUB innovation grant award, and hands-on industrial database optimization track record.",
     about_sub:
-      "I bridge deep engineering foundations with product conversion: interfaces must feel responsive and clean, while database logic ensures absolute stability under high loads.",
-    principle_1_title: "Clean Code & SOLID",
-    principle_1_desc:
-      "Scalable architecture designed for seamless long-term maintenance.",
-    principle_2_title: "Product-Mindset",
-    principle_2_desc:
-      "Laser focus on conversion rates, business metrics, and UX simplicity.",
+      "I merge resilient enterprise C# / .NET architecture with conversion-focused Figma UI/UX design. Delivering turnkey web products without intermediaries or technical debt.",
+    auth_card_1_title: "Enterprise & Industrial DB",
+    auth_card_1_desc:
+      "Production-grade SSMS and PostgreSQL optimization on manufacturing setups with up to 25% query speedup.",
+    auth_card_2_title: "Full-Cycle in One Hands",
+    auth_card_2_desc:
+      "From high-fidelity interactive Figma systems to .NET backend architecture and lightweight frontend without agency markups.",
+    auth_card_3_title: "Formal Contract, Git & 30-Day Warranty",
+    auth_card_3_desc:
+      "Transparent agreements, invoice compliance, continuous Git delivery, and dedicated 30-day post-launch technical warranty.",
     skills_title: "Tech Stack",
     skill_card_1_title: "Backend & Systems",
     skill_card_1_desc:
@@ -255,15 +262,18 @@ const translations = {
     trust_deadline: "100% Termintreue",
     about_title: "Über mich",
     about_lead:
-      "Software-Ingenieur mit fundierter Praxis in industrieller Datenbankoptimierung, Software-Architektur und performanten Webanwendungen.",
+      "IT-Ingenieur mit Auszeichnung (VoGU), Gewinner des Innovationsförderprogramms (694.000 RUB) und Praxis in industrieller Datenbankoptimierung.",
     about_sub:
-      "Mein Ansatz vereint solides Engineering mit Design-Präzision: Interfaces müssen blitzschnell reagieren und Datenbanksysteme hochbelastbar sein.",
-    principle_1_title: "Clean Code & SOLID",
-    principle_1_desc:
-      "Wartbare und zukunftssichere Systemarchitektur ohne technischen Ballast.",
-    principle_2_title: "Product-Mindset",
-    principle_2_desc:
-      "Strikter Fokus auf Benutzerfreundlichkeit, Skalierbarkeit und Conversion-Raten.",
+      "Ich kombiniere belastbare C# / .NET Enterprise-Architektur mit konvertierendem Figma UI/UX Design. Maßgeschneiderte Webprodukte ohne Zwischenhändler und Altlasten.",
+    auth_card_1_title: "Enterprise & Industrie-Datenbanken",
+    auth_card_1_desc:
+      "SSMS- und PostgreSQL-Optimierung in Industriebetrieben mit bis zu 25% schnellerer Datenverarbeitung.",
+    auth_card_2_title: "Full-Cycle aus einer Hand",
+    auth_card_2_desc:
+      "Vom interaktiven Figma-Prototyp bis zur .NET Backend-Architektur und schlankem Frontend ohne Agenturaufschläge.",
+    auth_card_3_title: "Vertrag, Git & 30 Tage Garantie",
+    auth_card_3_desc:
+      "Rechtssichere Verträge, fortlaufende Git-Übergabe und 30 Tage kostenlose technische Garantie nach Veröffentlichung.",
     skills_title: "Stack",
     skill_card_1_title: "Backend & Systeme",
     skill_card_1_desc:
@@ -488,8 +498,8 @@ function initAmbientCanvas() {
   let height = (canvas.height = window.innerHeight);
 
   const dots = [];
-  const spacing = 36;
-  const mouse = { x: -1000, y: -1000, radius: 130 };
+  const spacing = 38;
+  const mouse = { x: -1000, y: -1000, radius: 140 };
 
   window.addEventListener("resize", () => {
     width = canvas.width = window.innerWidth;
@@ -516,7 +526,7 @@ function initAmbientCanvas() {
           originY: y,
           x: x,
           y: y,
-          size: 1.15,
+          size: 1.2,
         });
       }
     }
@@ -536,21 +546,21 @@ function initAmbientCanvas() {
       const dist = Math.sqrt(dx * dx + dy * dy);
 
       if (dist < mouse.radius) {
-        const angle = Math.atan2(dy, borderCorrection(dx));
+        const angle = Math.atan2(dy, dx === 0 ? 0.001 : dx);
         const force = (mouse.radius - dist) / mouse.radius;
-        const pushX = Math.cos(angle) * force * 14;
-        const pushY = Math.sin(angle) * force * 14;
+        const pushX = Math.cos(angle) * force * 16;
+        const pushY = Math.sin(angle) * force * 16;
         dot.x = dot.originX - pushX;
         dot.y = dot.originY - pushY;
         ctx.fillStyle = isLight
-          ? "rgba(104, 114, 77, 0.6)"
-          : "rgba(147, 155, 118, 0.5)";
+          ? "rgba(104, 114, 77, 0.7)"
+          : "rgba(147, 155, 118, 0.6)";
       } else {
         dot.x += (dot.originX - dot.x) * 0.08;
         dot.y += (dot.originY - dot.y) * 0.08;
         ctx.fillStyle = isLight
           ? "rgba(0, 0, 0, 0.08)"
-          : "rgba(255, 255, 255, 0.07)";
+          : "rgba(255, 255, 255, 0.08)";
       }
 
       ctx.beginPath();
@@ -559,10 +569,6 @@ function initAmbientCanvas() {
     }
 
     requestAnimationFrame(animate);
-  }
-
-  function borderCorrection(val) {
-    return val === 0 ? 0.001 : val;
   }
 
   animate();
@@ -701,6 +707,51 @@ function initScrollAnimations() {
   elements.forEach((el) => observer.observe(el));
 }
 
+function initMetricCounters() {
+  const counterElements = document.querySelectorAll(".counter-val");
+
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const target = parseFloat(entry.target.getAttribute("data-target"));
+          const decimals = parseInt(
+            entry.target.getAttribute("data-decimals") || "0",
+            10,
+          );
+          const duration = 1400;
+          const startTime = performance.now();
+
+          function updateCounter(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const easeOut = 1 - Math.pow(1 - progress, 3);
+            const currentVal = easeOut * target;
+
+            entry.target.textContent =
+              decimals > 0
+                ? currentVal.toFixed(decimals)
+                : Math.floor(currentVal);
+
+            if (progress < 1) {
+              requestAnimationFrame(updateCounter);
+            } else {
+              entry.target.textContent =
+                decimals > 0 ? target.toFixed(decimals) : target;
+            }
+          }
+
+          requestAnimationFrame(updateCounter);
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 },
+  );
+
+  counterElements.forEach((el) => observer.observe(el));
+}
+
 function init3DTilt() {
   if (window.innerWidth < 992) return;
 
@@ -752,12 +803,14 @@ function initCostCalculator() {
   const checklistEl = document.getElementById("calcChecklist");
   const applyBtn = document.getElementById("calcApplyBtn");
   const userMessage = document.getElementById("userMessage");
+  const summaryCard = document.querySelector(".summary-card");
 
   if (!priceDisplay || !daysDisplay || !checklistEl) return;
 
   let currentType = "landing";
-  let basePrice = 40000;
-  let baseDays = 6;
+  let basePrice = 19000;
+  let baseDays = 5;
+  let lastPrice = 32000;
 
   function renderChecklist() {
     const list =
@@ -770,6 +823,23 @@ function initCostCalculator() {
       li.textContent = item;
       checklistEl.appendChild(li);
     });
+  }
+
+  function animateNumber(element, start, end, duration) {
+    const startTime = performance.now();
+    function step(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easeProgress = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(start + (end - start) * easeProgress);
+      element.textContent = `${current.toLocaleString("ru-RU")} ₽`;
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        element.textContent = `${end.toLocaleString("ru-RU")} ₽`;
+      }
+    }
+    requestAnimationFrame(step);
   }
 
   function calculateTotal() {
@@ -791,7 +861,14 @@ function initCostCalculator() {
 
     if (totalDays < 3) totalDays = 3;
 
-    priceDisplay.textContent = `${totalCost.toLocaleString("ru-RU")} ₽`;
+    if (summaryCard) {
+      summaryCard.classList.remove("pulse-glow");
+      void summaryCard.offsetWidth;
+      summaryCard.classList.add("pulse-glow");
+    }
+
+    animateNumber(priceDisplay, lastPrice, totalCost, 400);
+    lastPrice = totalCost;
 
     if (currentLang === "en") {
       daysDisplay.textContent = `~${totalDays} business days`;
@@ -930,43 +1007,24 @@ function initContactForm() {
     submitBtn.classList.add("loading");
     submitBtn.disabled = true;
 
-    const isLiveServer =
-      window.location.port === "5500" || window.location.port === "5501";
-
-    if (isLiveServer) {
-      setTimeout(() => {
-        formStatus.classList.add("success");
-        formStatus.textContent =
-          "✓ Заявка принята в тестовом режиме (VS Code Live Server не поддерживает PHP). На реальном хостинге с PHP письмо будет отправлено на losevfedor287@gmail.com.";
-        form.reset();
-        submitBtn.classList.remove("loading");
-        submitBtn.disabled = false;
-      }, 700);
-      return;
-    }
-
     try {
       const formData = new FormData(form);
-      const response = await fetch(form.action, {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: formData,
         headers: { Accept: "application/json" },
       });
 
-      const responseText = await response.text();
-      let data;
+      const data = await response.json();
 
-      try {
-        data = JSON.parse(responseText);
-      } catch (parseErr) {
-        throw new Error(
-          "Не удалось обработать ответ сервера. Напишите напрямую на losevfedor287@gmail.com или в Telegram @lonelyauthor",
-        );
-      }
-
-      if (response.ok && data.status === "success") {
+      if (response.ok && data.success) {
         formStatus.classList.add("success");
-        formStatus.textContent = data.message || "✓ Заявка успешно принята!";
+        formStatus.textContent =
+          currentLang === "en"
+            ? "✓ Message sent successfully! I will contact you shortly."
+            : currentLang === "de"
+              ? "✓ Nachricht erfolgreich gesendet! Ich melde mich in Kürze."
+              : "✓ Заявка успешно отправлена! Я свяжусь с вами в ближайшее время.";
         form.reset();
       } else {
         throw new Error(data.message || "Ошибка отправки");
@@ -975,7 +1033,7 @@ function initContactForm() {
       formStatus.classList.add("error");
       formStatus.textContent =
         err.message ||
-        "Ошибка соединения. Вы можете написать мне на почту: losevfedor287@gmail.com";
+        "Ошибка соединения. Напишите напрямую на почту: losevfedor287@gmail.com или в Telegram @lonelyauthor";
     } finally {
       submitBtn.classList.remove("loading");
       submitBtn.disabled = false;
